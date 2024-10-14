@@ -1,0 +1,145 @@
+"'Home Screen' As screen":
+    Fill: =RGBA(186, 202, 226, .3)
+    LoadingSpinnerColor: =App.Theme.Colors.Primary
+
+    "Gallery1 As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver5.0'":
+        BorderColor: =App.Theme.Colors.Darker40
+        DelayItemLoading: =true
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =500
+        Items: =Filter(Employees, Or(Text(Department) = TabList1.Selected.Value, TabList1.Selected.Value = "All"))
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplatePadding: =0
+        TemplateSize: =75
+        Width: =1366
+        Y: =268
+        ZIndex: =1
+
+        txtName As label:
+            Color: =RGBA(50, 49, 48, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =App.Theme.Font
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.Name
+            VerticalAlign: =VerticalAlign.Top
+            Width: =250
+            X: =16
+            Y: =(Parent.TemplateHeight - (Self.Size*1.8 + txtDepartment.Size*1.8 + 2 + txtSalary.Size*1.8)) / 2
+            ZIndex: =1
+
+        txtDepartment As label:
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =App.Theme.Font
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =12
+            Text: =ThisItem.Department
+            VerticalAlign: =VerticalAlign.Top
+            Width: =txtName.Width
+            X: =txtName.X
+            Y: =txtName.Y + txtName.Height
+            ZIndex: =2
+
+        txtSalary As label:
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =App.Theme.Font
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =12
+            Text: |-
+                =Text(ThisItem.Salary,"₹##,##.00")
+            VerticalAlign: =VerticalAlign.Top
+            Width: =txtName.Width
+            X: =txtName.X
+            Y: =txtDepartment.Y + txtDepartment.Height
+            ZIndex: =3
+
+        "Progress6 As 'Progress Bar'":
+            DisplayMode: =DisplayMode.Edit
+            Height: =2
+            Indeterminate: =true
+            Width: =1345
+            X: =2
+            Y: =73
+            ZIndex: =4
+
+    Container1 As groupContainer.manualLayoutContainer:
+        DropShadow: =DropShadow.Semibold
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =71
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        Width: =1366
+        ZIndex: =2
+
+        Header1 As Header:
+            DisplayMode: =DisplayMode.Edit
+            Height: =Parent.Height
+            Logo: ='20180428_120335'
+            OnSelectLogo: =false
+            Title: ="Employee Information"
+            UserEmail: =User().Email
+            UserImage: =User().Image
+            UserName: =User().FullName
+            Width: =Parent.Width
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+    Container2 As groupContainer.manualLayoutContainer:
+        DropShadow: =DropShadow.Light
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =92
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        Width: =438
+        X: =198
+        Y: =150
+        ZIndex: =3
+
+        "TabList1 As 'Tab list'.pcfdataset":
+            DefaultSelectedItems: =["All"]
+            DisplayMode: =DisplayMode.Edit
+            Height: =69
+            Items: =["All","Accounts", "HR", "IT", "QA"]
+            Width: =389
+            X: =72
+            Y: =23
+            ZIndex: =1
+
+        Label1 As label:
+            BorderColor: =App.Theme.Colors.Darker40
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =App.Theme.Font
+            Height: =37
+            Size: =13
+            Text: ="🔎"
+            Width: =65
+            X: =36
+            Y: =38
+            ZIndex: =2
+

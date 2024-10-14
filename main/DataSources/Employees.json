@@ -1,0 +1,147 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "cr016_table1s",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "cr016_table1",
+    "Name": "Employees",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "cr016_age": "Age",
+      "cr016_department": "Department",
+      "cr016_gender": "Gender",
+      "cr016_joiningdate": "JoiningDate",
+      "cr016_name": "Name",
+      "cr016_permanentaddress": "PermanentAddress",
+      "cr016_salary": "Salary",
+      "cr016_salary_base": "Salary (Base)",
+      "cr016_table1_AsyncOperations": "System Jobs",
+      "cr016_table1_BulkDeleteFailures": "Bulk Delete Failures",
+      "cr016_table1_DuplicateBaseRecord": "Duplicate Records (cr016_table1_DuplicateBaseRecord)",
+      "cr016_table1_DuplicateMatchingRecord": "Duplicate Records (cr016_table1_DuplicateMatchingRecord)",
+      "cr016_table1_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "cr016_table1_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "cr016_table1_ProcessSession": "Process Sessions",
+      "cr016_table1_SyncErrors": "Sync Errors",
+      "cr016_table1id": "Table1",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "exchangerate": "Exchange Rate",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "transactioncurrencyid": "Currency",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "Employees",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Employees (Views)",
+    "Name": "_cr016_table1_views",
+    "RelatedEntityName": "Employees",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "81a96910-e820-4e88-9187-b1f04e9d2611": "Inactive Table1S",
+      "a89e7fa1-6f2f-4749-a8e4-7887b7e1c877": "Active Table1S",
+      "d47a985a-430a-4f7a-9cb0-68f7b2100ab5": "Table1 Associated View",
+      "e81b7695-3d7c-4240-bc6b-50451552f4a3": "Table1 Advanced Find View",
+      "ee23253e-6462-46ca-86bf-fa4fd93dd581": "Table1 Lookup View"
+    }
+  },
+  {
+    "DisplayName": "Department (Employees)",
+    "Name": "cr016_table1_cr016_department",
+    "OptionSetInfoNameMapping": {
+      "945640000": "IT",
+      "945640001": "HR",
+      "945640002": "Accounts",
+      "945640003": "QA"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "cr016_department",
+        "OptionSetReferenceEntityName": "Employees"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "cr016_department",
+    "RelatedEntityName": "Employees",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Gender (Employees)",
+    "Name": "cr016_table1_cr016_gender",
+    "OptionSetInfoNameMapping": {
+      "945640000": "Male",
+      "945640001": "Female"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "cr016_gender",
+        "OptionSetReferenceEntityName": "Employees"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "cr016_gender",
+    "RelatedEntityName": "Employees",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status (Employees)",
+    "Name": "cr016_table1_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "Employees"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "Employees",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (Employees)",
+    "Name": "cr016_table1_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "Employees"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "Employees",
+    "Type": "OptionSetInfo"
+  }
+]
